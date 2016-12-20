@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+                <title>
+                    Toto Infocare – Your Kids' Care giver
+                </title>
+                <script>
+                    /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+                            if ( typeof WebFontConfig === "undefined" ) {
+                                WebFontConfig = new Object();
+                            }
+                            WebFontConfig['google'] = {families: ['Karla', 'Nunito:300,400,700&amp;subset=latin']};
+
+                            (function() {
+                                var wf = document.createElement( 'script' );
+                                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+                                wf.type = 'text/javascript';
+                                wf.async = 'true';
+                                var s = document.getElementsByTagName( 'script' )[0];
+                                s.parentNode.insertBefore( wf, s );
+                            })();
+                </script>
+                <!--   <meta content="noindex,follow" name="robots"/>
+                <link href="http://care.aislinthemes.com/nannie/feed/" rel="alternate" title="Nannie » Feed" type="application/rss+xml"/>
+                <link href="http://care.aislinthemes.com/nannie/comments/feed/" rel="alternate" title="Nannie » Comments Feed" type="application/rss+xml"/>
+                <link href="http://care.aislinthemes.com/nannie/events/?ical=1" rel="alternate" title="Nannie » iCal Feed" type="text/calendar"/> -->
+                <script type="text/javascript">
+                    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"http:\/\/care.aislinthemes.com\/nannie\/wp-includes\/js\/wp-emoji.js?ver=4.6-alpha-37307","twemoji":"http:\/\/care.aislinthemes.com\/nannie\/wp-includes\/js\/twemoji.js?ver=4.6-alpha-37307"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple", "flag", "diversity" or "unicode8" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' ),
+			stringFromCharCode = String.fromCharCode,
+			tonedata, tone, tone2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'A' and 'U' in them, if the browser doesn't render flag emoji
+				 * - The Australian flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56806, 55356, 56826 ), 0, 0 );
+				return canvas.toDataURL().length > 3000;
+			case 'diversity':
+				/*
+				 * This tests if the browser supports the Emoji Diversity specification, by rendering an
+				 * emoji with no skin tone specified (in this case, Santa). It then adds a skin tone, and
+				 * compares if the emoji rendering has changed.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57221 ), 0, 0 );
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				context.fillText( stringFromCharCode( 55356, 57221, 55356, 57343 ), 0, 0 );
+				// Chrome has issues comparing arrays, and Safari has issues converting arrays to strings.
+				// So, we create our own string and compare that, instead.
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone2 = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				return tone !== tone2;
+			case 'simple':
+				/*
+				 * This creates a smiling emoji, and checks to see if there is any image data in the
+				 * center pixel. In browsers that don't support emoji, the character will be rendered
+				 * as an empty square, so the center pixel will be blank.
+				 */
+				context.fillText( stringFromCharCode( 55357, 56835 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+			case 'unicode8':
+				/*
+				 * To check for Unicode 8 support, let's try rendering the most important advancement
+				 * that the Unicode Consortium have made in years: the burrito.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57135 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'simple', 'flag', 'unicode8', 'diversity' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+                </script>
+                <style type="text/css">
+                    img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+                </style>
+                <link href="css/layerslider.css" id="layerslider-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&subset=latin%2Clatin-ext" id="ls-google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/styles.css" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/sgg.min.css" id="smart-grid-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/video-popup.css" id="st-video-popup-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/vc_extend.css" id="vc_extend_style-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/theme-icons.css" id="theme-icons-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/js_composer.min.css" id="js_composer_front-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/font-awesome.min.css" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/main.css" id="sp-style-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/groundwork-responsive.css" id="bricklayer.groundwork-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/style.css" id="style.default-css" media="all" rel="stylesheet" type="text/css"/>
+                <link href="css/care_options_style.css" id="care_options_style-css" media="all" rel="stylesheet" type="text/css"/>
+                <script src="js/greensock.js" type="text/javascript">
+                </script>
+                <script src="js/jquery.js" type="text/javascript">
+                </script>
+                <script src="js/jquery-migrate.js" type="text/javascript">
+                </script>
+                <script type="text/javascript">
+                    /* <![CDATA[ */
+var LS_Meta = {"v":"5.6.8"};
+/* ]]> */
+                </script>
+                <script src="js/layerslider.kreaturamedia.jquery.js" type="text/javascript">
+                </script>
+                <script src="js/layerslider.transitions.js" type="text/javascript">
+                </script>
+                <script src="js/sgg.min.js" type="text/javascript">
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?sensor=false&ver=4.6-alpha-37307" type="text/javascript">
+                </script>
+                <script src="js/modernizr-2.7.0.min.js" type="text/javascript">
+                </script>
+                <meta content="Powered by LayerSlider 5.6.8 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress." name="generator"/>
+                <!-- LayerSlider updates and docs at: https://kreaturamedia.com/layerslider-responsive-wordpress-slider-plugin/ -->
+                <!--  <link href="http://care.aislinthemes.com/nannie/wp-json/" rel="https://api.w.org/"/>
+                <link href="http://care.aislinthemes.com/nannie/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+                <link href="http://care.aislinthemes.com/nannie/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+                <meta content="WordPress 4.6-alpha-37307" name="generator"/> -->
+                <!-- <link href="http://care.aislinthemes.com/nannie/" rel="canonical"/>
+                <link href="http://care.aislinthemes.com/nannie/" rel="shortlink"/>
+                <link href="http://care.aislinthemes.com/nannie/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcare.aislinthemes.com%2Fnannie%2F" rel="alternate" type="application/json+oembed"/>
+                <link href="http://care.aislinthemes.com/nannie/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcare.aislinthemes.com%2Fnannie%2F&format=xml" rel="alternate" type="text/xml+oembed"/> -->
+                <script>
+                    var care_plugin = care_plugin ||
+			{
+				data: {
+					vcWidgets: {}
+				}
+			};
+                </script>
+                <script>
+                    var wheels = wheels ||
+			{
+				siteName: "Nannie",
+				data: {
+					useScrollToTop: true,
+					useStickyMenu: true,
+					scrollToTopText: "",
+					isAdminBarShowing: false,
+					initialWaypointScrollCompensation: "140"				}
+			};
+                </script>
+                <script id="wh-custom-js-code">
+                    jQuery(document).ready(function(){
+
+});
+                </script>
+                <style>
+                    @media screen and (max-width: 767px) {
+			#cbp-menu-main { width: 100%; }
+
+			.wh-main-menu { display: none; }
+			.wh-header { display: none; }
+		}
+                </style>
+                <script>
+                    var wheels  = wheels || {};
+		wheels.data = wheels.data || {};
+
+		wheels.data.respmenu = {
+			id: 'cbp-menu-main',
+			options: {
+				id: 'cbp-menu-main-respmenu',
+				submenuToggle: {
+					className: 'cbp-respmenu-more',
+					html: '<i class="fa fa-angle-down"></i>'
+				},
+				logo: {
+					src: "images\/logo.png",
+					link: '#'
+				},
+				toggleSwitch: {
+					src: ""				},
+				prependTo: 'body',
+				skipClasses: ['wcmenucart-contents']
+			}
+		};
+                </script>
+                <style data-type="vc_custom-css" type="text/css">
+                    .wh-header-button {
+    text-align: left;
+    padding-left: 67px;
+    padding-top: 27px;
+    padding-bottom: 25px;
+    border-radius: 0;
+    padding-right: 25px;
+    position: relative;
+    float: right;
+}
+.wh-header-button a {
+    color: #fff;
+}
+.wh-header-button i {
+    position: absolute;
+    left: 28px;
+    font-size: 27px;
+}
+.wh-header-button span {
+    font-size: 12px;
+    display: block;
+    text-transform: none;
+    margin-top: 4px;
+}
+.wh-header-link {
+    float: right;
+}
+                </style>
+                <style data-type="vc_shortcodes-custom-css" type="text/css">
+                    .vc_custom_1461581114986{background-color: #565656 !important;}.vc_custom_1459169239492{padding-top: 7px !important;padding-bottom: 7px !important;}.vc_custom_1459169247628{padding-top: 7px !important;padding-bottom: 7px !important;}.vc_custom_1461160765628{margin-bottom: 0px !important;}.vc_custom_1461160968113{margin-bottom: 0px !important;}.vc_custom_1461160973416{margin-right: 12px !important;margin-bottom: 0px !important;}.vc_custom_1461584620608{padding-top: 26px !important;}.vc_custom_1461584634348{padding-top: 26px !important;}.vc_custom_1461665992130{padding-top: 0px !important;}.vc_custom_1461678725284{margin-top: 4px !important;}.vc_custom_1461161144352{margin-bottom: 0px !important;padding-left: 51px !important;}.vc_custom_1461161149916{padding-left: 51px !important;}.vc_custom_1461678737211{margin-top: 4px !important;}.vc_custom_1461161155861{margin-bottom: 0px !important;padding-left: 51px !important;}.vc_custom_1461762731490{padding-left: 51px !important;}.vc_custom_1462369037018{margin-bottom: 0px !important;}.vc_custom_1461573332229{margin-top: -1px !important;margin-bottom: 0px !important;}
+                </style>
+                <style data-type="vc_custom-css" type="text/css">
+                    .wh-footer-icons {
+    width: 310px;
+    margin: 0 auto;
+}
+                </style>
+                <style data-type="vc_shortcodes-custom-css" type="text/css">
+                    .vc_custom_1461245159423{padding-top: 50px !important;padding-bottom: 26px !important;}.vc_custom_1462795336183{padding-bottom: 48px !important;}.vc_custom_1461234082659{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1463147010424{margin-bottom: 0px !important;}.vc_custom_1463057982496{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463057993392{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058005422{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058015515{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058025013{margin-bottom: 0px !important;}.vc_custom_1463147015824{margin-bottom: 0px !important;}
+                </style>
+                <style id="breadcrumb-trail-css" type="text/css">
+                    .breadcrumbs .trail-browse,.breadcrumbs .trail-items,.breadcrumbs .trail-items li {display: inline-block;margin:0;padding: 0;border:none;background:transparent;text-indent: 0;}.breadcrumbs .trail-browse {font-size: inherit;font-style:inherit;font-weight: inherit;color: inherit;}.breadcrumbs .trail-items {list-style: none;}.trail-items li::after {content: "\002F";padding: 0 0.5em;}.trail-items li:last-of-type::after {display: none;}
+                </style>
+                <meta content="Powered by Visual Composer - drag and drop page builder for WordPress." name="generator"/>
+                <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://care.aislinthemes.com/app/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+                <!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://care.aislinthemes.com/app/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+                <style data-type="vc_custom-css" type="text/css">
+                    .wh-column-offset {
+    margin-left: 13%;
+}
+.wh-box-big {
+    padding-left: 15px;
+    padding-right: 23px;
+}
+
+.wh-box-big-left {
+    padding-left: 10px;
+}
+.wh-icon-box .vc_column-inner:hover {
+    border-color: #d2d2d2;
+    box-shadow: 0px 1px 1px #DCDFE8
+}
+
+.wh-post-list h3 a {
+    font-weight: normal;
+}
+
+.wh-box-shadow .vc_column-inner {
+    box-shadow: 0px 1px 1px #DCDFE8;
+}
+#contact .wpcf7-textarea {
+    height: 206px;
+}
+.wh-home-gallery {
+    width: 120%;
+    margin-left: -10% !important;
+}
+.wh-testimonial-stars i {
+    color: gold;
+    margin-right: 10px;
+    font-size: 13px;
+}
+.wh-map-embellishment {
+    position: absolute;
+    left: 50%;
+    margin-left: -48px !important;
+    z-index: 999;
+}
+.wh-home-quote {
+    max-width: 300px;
+}
+.wh-footer-icons {
+    width: 310px;
+    margin: 0 auto;
+}
+.wh-button-float-right {
+    float: right;
+}
+@media (max-width: 1400px)  { 
+.wh-home-gallery {
+    width: auto;
+    margin-left: -15px !important;
+}
+}
+@media (max-width: 1200px)  { 
+.wh-box-big {
+    padding-right: 15px;
+    margin-bottom: 35px;
+}
+.wh-box-big-left {
+    padding-left: 0;
+}
+}
+@media (max-width: 767px)  { 
+.wh-column-offset {
+    margin-left: 0;
+}
+}
+                </style>
+                <style data-type="vc_shortcodes-custom-css" type="text/css">
+                    .vc_custom_1461751275875{margin-top: 27px !important;}.vc_custom_1463143499259{margin-top: 25px !important;margin-bottom: 55px !important;}.vc_custom_1462278324178{padding-bottom: 30px !important;}.vc_custom_1462273409674{margin-top: 80px !important;background-color: #f5f5f5 !important;}.vc_custom_1462266590948{background-color: #f5f5f5 !important;}.vc_custom_1462274210999{padding-bottom: 80px !important;background-color: #f5f5f5 !important;}.vc_custom_1463039516456{padding-top: 0px !important;}.vc_custom_1461669064476{padding-top: 50px !important;padding-bottom: 45px !important;}.vc_custom_1460993108546{padding-bottom: 50px !important;}.vc_custom_1461751483559{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #f8f8f8 !important;}.vc_custom_1461245159423{padding-top: 50px !important;padding-bottom: 26px !important;}.vc_custom_1461245197377{margin-bottom: -57px !important;padding-bottom: 48px !important;}.vc_custom_1460468851758{margin-top: -35px !important;}.vc_custom_1461577273061{border-top-width: 6px !important;border-right-width: 6px !important;border-bottom-width: 6px !important;border-left-width: 6px !important;padding-top: 36px !important;padding-right: 36px !important;padding-bottom: 36px !important;padding-left: 36px !important;border-left-color: #f2f2f2 !important;border-left-style: solid !important;border-right-color: #f2f2f2 !important;border-right-style: solid !important;border-top-color: #f2f2f2 !important;border-top-style: solid !important;border-bottom-color: #f2f2f2 !important;border-bottom-style: solid !important;}.vc_custom_1461592251794{margin-bottom: 0px !important;}.vc_custom_1462275191197{margin-bottom: 0px !important;}.vc_custom_1462275167582{margin-bottom: 20px !important;}.vc_custom_1462275177830{margin-bottom: 25px !important;}.vc_custom_1462275203941{margin-bottom: 15px !important;}.vc_custom_1461593412969{margin-bottom: 0px !important;}.vc_custom_1463390140563{margin-bottom: 0px !important;}.vc_custom_1463390059705{margin-bottom: 0px !important;}.vc_custom_1462278355813{margin-bottom: 23px !important;}.vc_custom_1462278375585{margin-bottom: 23px !important;}.vc_custom_1462278876478{margin-bottom: 23px !important;}.vc_custom_1461592262718{margin-bottom: 0px !important;}.vc_custom_1462275089832{margin-bottom: 20px !important;}.vc_custom_1462275078680{margin-bottom: 20px !important;}.vc_custom_1463392166575{margin-bottom: 0px !important;}.vc_custom_1462277073960{margin-bottom: 0px !important;}.vc_custom_1462277083361{margin-bottom: 0px !important;}.vc_custom_1462277087976{margin-bottom: 0px !important;}.vc_custom_1461669288135{margin-bottom: 0px !important;}.vc_custom_1461592716078{margin-bottom: 0px !important;}.vc_custom_1461668859393{margin-top: 38px !important;margin-bottom: 11px !important;}.vc_custom_1461745379088{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1461745566299{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1461745570130{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1462278025472{margin-left: 5px !important;}.vc_custom_1463049964459{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050001942{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1462278064175{margin-left: 5px !important;}.vc_custom_1463049970619{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050007617{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1462278095045{margin-left: 5px !important;}.vc_custom_1463049975807{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050012521{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1461745573940{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1461745577387{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1461745581475{margin-bottom: 0px !important;border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 23px !important;padding-bottom: 28px !important;border-left-color: #dcdcdc !important;border-left-style: solid !important;border-right-color: #dcdcdc !important;border-right-style: solid !important;border-top-color: #dcdcdc !important;border-top-style: solid !important;border-bottom-color: #dcdcdc !important;border-bottom-style: solid !important;}.vc_custom_1462278122655{margin-left: 5px !important;}.vc_custom_1463049981339{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050018559{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1462278165866{margin-left: 5px !important;}.vc_custom_1463049986645{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050024132{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1462278199439{margin-left: 5px !important;}.vc_custom_1463049991925{margin-bottom: 5px !important;padding-left: 88px !important;}.vc_custom_1463050029296{margin-bottom: 0px !important;padding-right: 20px !important;padding-left: 88px !important;}.vc_custom_1463392217165{margin-bottom: 0px !important;}.vc_custom_1463392211494{margin-bottom: 0px !important;}.vc_custom_1463392227510{margin-bottom: 0px !important;}.vc_custom_1463392223507{margin-bottom: 0px !important;}.vc_custom_1461666389681{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1463392270335{margin-top: 74px !important;margin-bottom: 0px !important;}.vc_custom_1463392276893{margin-bottom: 0px !important;}.vc_custom_1463392281119{margin-bottom: 0px !important;}.vc_custom_1463392284734{margin-bottom: 0px !important;}.vc_custom_1463392288996{margin-bottom: 0px !important;}.vc_custom_1462280822554{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1459850666073{margin-bottom: 0px !important;}.vc_custom_1461666504301{margin-bottom: 0px !important;}.vc_custom_1461062733888{margin-bottom: 0px !important;}.vc_custom_1461063493055{margin-bottom: 8px !important;}.vc_custom_1461666606488{margin-bottom: 40px !important;}.vc_custom_1461062750811{margin-bottom: 0px !important;}.vc_custom_1461063499534{margin-bottom: 8px !important;}.vc_custom_1461666389681{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1461669133445{margin-top: 74px !important;margin-bottom: 15px !important;}.vc_custom_1461669367425{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1459850666073{margin-bottom: 0px !important;}.vc_custom_1458739667740{padding-right: 50px !important;}.vc_custom_1461593337198{margin-bottom: 0px !important;border-top-width: 5px !important;border-right-width: 5px !important;border-bottom-width: 5px !important;border-left-width: 5px !important;background-color: #ffffff !important;border-left-color: #f0f0f0 !important;border-left-style: solid !important;border-right-color: #f0f0f0 !important;border-right-style: solid !important;border-top-color: #f0f0f0 !important;border-top-style: solid !important;border-bottom-color: #f0f0f0 !important;border-bottom-style: solid !important;}.vc_custom_1462277848818{margin-bottom: 3px !important;}.vc_custom_1462277844130{margin-bottom: 21px !important;}.vc_custom_1462276879001{margin-bottom: 43px !important;}.vc_custom_1462274693600{padding-left: 40px !important;}.vc_custom_1462277568458{margin-bottom: 20px !important;}.vc_custom_1462274873436{margin-bottom: 0px !important;}.vc_custom_1462274877754{margin-bottom: 0px !important;}.vc_custom_1462274882392{margin-bottom: 0px !important;}.vc_custom_1462276786843{padding-left: 40px !important;}.vc_custom_1462277579397{margin-bottom: 20px !important;}.vc_custom_1462276670378{margin-bottom: 0px !important;}.vc_custom_1462276693399{margin-bottom: 0px !important;}.vc_custom_1462276797250{padding-left: 40px !important;}.vc_custom_1462277584946{margin-bottom: 20px !important;}.vc_custom_1462276714713{margin-bottom: 0px !important;}.vc_custom_1462276727114{margin-bottom: 0px !important;}.vc_custom_1462276736248{margin-bottom: 0px !important;}.vc_custom_1461234082659{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1463147040714{margin-bottom: 0px !important;}.vc_custom_1463058084704{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058075537{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058061513{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058050816{margin-right: 37px !important;margin-bottom: 0px !important;}.vc_custom_1463058040759{margin-bottom: 0px !important;}.vc_custom_1463147045348{margin-bottom: 0px !important;}
+                </style>
+                <noscript>
+                    <style type="text/css">
+                        .wpb_animate_when_almost_visible { opacity: 1; }
+                    </style>
+                </noscript>
+            </meta>
+        </meta>
+    </head>
+    <body class="home page page-id-13 page-template page-template-template-home-no-footer page-template-template-home-no-footer-php wpb-js-composer js-comp-ver-4.12 vc_responsive">
+        <div class="cbp-container wh-top-bar pad-left">
+            <!-- <div class="vc_row wpb_row vc_row-fluid wh-top-header vc_custom_1461581114986 vc_row-has-fill" data-vc-full-width="true" data-vc-full-width-init="false">
+                <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs">
+                    <div class="vc_column-inner vc_custom_1459169239492">
+                        <div class="wpb_wrapper">
+                            <p class="vc_custom_heading vc_custom_1461160765628" style="font-size: 11px;color: #ffffff;text-align: left">
+                                Care is the cornerstone of our practice
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs">
+                    <div class="vc_column-inner vc_custom_1459169247628">
+                        <div class="wpb_wrapper">
+                            <div class="vc_custom_heading wh-header-link vc_custom_1461160968113" style="font-size: 11px;color: #ffffff;text-align: right">
+                                <a href="#">
+                                    Online Documentation
+                                </a>
+                            </div>
+                            <div class="vc_custom_heading wh-header-link vc_custom_1461160973416" style="font-size: 11px;color: #ffffff;text-align: right">
+                                <a href="#">
+                                    Elements
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="vc_row-full-width vc_clearfix">
+            </div>
+            <div class="vc_row wpb_row vc_row-fluid">
+                <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-md-3 vc_hidden-xs">
+                    <div class="vc_column-inner vc_custom_1461584620608">
+                        <div class="wpb_wrapper">
+                            <div class="wh-theme-icon vc_custom_1461678725284 " style="font-size:36px;position:absolute;color:#dddddd!important;">
+                                <i class="icon-check-icon" onmouseout="this.style.color='#dddddd'" onmouseover="this.style.color='#d0d0d0'">
+                                </i>
+                            </div>
+                            <h6 class="vc_custom_heading vc_custom_1461161144352" style="font-size: 14px;color: #656565;text-align: left">
+                                Call Today +254 712 345 678
+                            </h6>
+                            <p class="vc_custom_heading vc_custom_1461161149916" style="font-size: 14px;line-height: 16px;text-align: left">
+                                Hurlighan, Nairobi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-md-3 vc_hidden-xs">
+                    <div class="vc_column-inner vc_custom_1461584634348">
+                        <div class="wpb_wrapper">
+                            <div class="wh-theme-icon vc_custom_1461678737211 " style="font-size:36px;position:absolute;color:#dddddd!important;">
+                                <i class="icon-check-icon" onmouseout="this.style.color='#dddddd'" onmouseover="this.style.color='#d0d0d0'">
+                                </i>
+                            </div>
+                            <h6 class="vc_custom_heading vc_custom_1461161155861" style="font-size: 14px;color: #656565;text-align: left">
+                                Mon-Sat: 07:00 - 17:00
+                            </h6>
+                            <p class="vc_custom_heading vc_custom_1461762731490" style="font-size: 14px;line-height: 16px;text-align: left">
+                                Find a class to Balance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-md-6 vc_hidden-xs">
+                    <div class="vc_column-inner vc_custom_1461665992130">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1462369037018 wh-header-button wh-button">
+                                <div class="wpb_wrapper">
+                                    <a href="/#contact">
+                                        <i class="icon-telephone">
+                                        </i>
+                                        CONTACT US
+                                        <span>
+                                            Connect with us today
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vc_row wpb_row vc_row-fluid">
+                <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper">
+                            <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1461573332229 vc_custom_1461573332229">
+                                <span class="vc_sep_holder vc_sep_holder_l">
+                                    <span class="vc_sep_line">
+                                    </span>
+                                </span>
+                                <span class="vc_sep_holder vc_sep_holder_r">
+                                    <span class="vc_sep_line">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="cbp-row wh-header wh-header-inner ">
+            <div class="wh-main-menu-bar-wrapper wh-sticky-header-enabled">
+                <div class="cbp-container">
+                    <div class="wh-logo-wrap one fourth wh-padding">
+                        <div class="wh-logo align-left">
+                            <a href="#">
+                                <img alt="logo" src="images/logo.png" width="">
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="logo-sticky">
+                        <a href="#">
+                            <img alt="logo" src="images/logo.png" width="190">
+                            </img>
+                        </a>
+                    </div>
+                    <div class="wh-main-menu three fourths wh-padding">
+                        <div id="cbp-menu-main">
+                            <div class="menu-nannie-container">
+                                <ul class="sf-menu wh-menu-main pull-right" id="menu-nannie">
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232" id="menu-item-232">
+                                        <a href="#about">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233" id="menu-item-233">
+                                        <a href="#qualifications">
+                                            Our Services
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-319" id="menu-item-319">
+                                        <a href="#fees">
+                                            Fees
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234" id="menu-item-234">
+                                        <a href="#testimonials">
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236" id="menu-item-236">
+                                        <a href="#news">
+                                            News
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235" id="menu-item-235">
+                                        <a href="#contact">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="cbp-row wh-content">
+            <div class="cbp-container wh-padding">
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_layerslider_element wpb_content_element">
+                                    <script data-cfasync="false" type="text/javascript">
+                                        var lsjQuery = jQuery;
+                                    </script>
+                                    <script data-cfasync="false" type="text/javascript">
+                                        lsjQuery(document).ready(function() {
+if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1_1482219757_1','jquery'); }
+else {
+lsjQuery("#layerslider_1_1482219757_1").layerSlider({responsiveUnder: 1140, layersContainer: 1140, navStartStop: false, navButtons: false, skinsPath: 'http://care.aislinthemes.com/app/plugins/LayerSlider/static/skins/'})
+}
+});
+                                    </script>
+                                    <div class="ls-wp-fullwidth-container" style="height:615px;">
+                                        <div class="ls-wp-fullwidth-helper">
+                                            <div class="ls-wp-container" id="layerslider_1_1482219757_1" style="width:100%;height:615px;margin:0 auto;margin-bottom: 0px;">
+                                                <div class="ls-slide" data-ls="transition2d:5;">
+                                                    <img alt="Nannie-slider" class="ls-bg" src="images/Nannie-slider.jpg"/>
+                                                    <div class="ls-l" data-ls="offsetxin:0;offsetyin:200;fadein:false;offsetxout:0;offsetyout:-200;" style="top:474px;left:0px;width:1140px;height:144px;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:#9054ef;border-radius:;white-space: nowrap;">
+                                                        <div class="slider-overlay">
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:505px;left:243px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:29px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Certified Babysitter
+                                                    </h2>
+                                                    <h2 class="ls-l hide-on-desktop" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:495px;left:241px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:40px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Certified Babysitter
+                                                    </h2>
+                                                    <p class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:517px;left:622px;width:450px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:15px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        “ We provide exceptional, compassion care to your loved in exceptional, compassionate care to your loved ones of home. ”
+                                                    </p>
+                                                    <p class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:543px;left:243px;width:300px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:13px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        Joanne | 38 yrs old | 10+ experience | $15-30/hr
+                                                    </p>
+                                                    <p class="ls-l hide-on-desktop" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:554px;left:243px;width:500px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:22px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        Joanne | 38 yrs old | 10+ experience | $15-30/hr
+                                                    </p>
+                                                    <div class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:536px;left:564px;width:6px;height:12px;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:#824cd7;border-radius:;white-space: nowrap;">
+                                                    </div>
+                                                    <h2 class="ls-l" style="top:150px;left:22px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:54px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Are you Ready to
+                                                    </h2>
+                                                    <h2 class="ls-l" style="top:213px;left:18px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:54px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        inspire your child?
+                                                    </h2>
+                                                    <img alt="" class="ls-l" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" src="images/Profile.png" style="top:357px;left:18px;width:200px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:13px solid #9054ef;border-right:13px solid #9054ef;border-bottom:13px solid #9054ef;border-left:13px solid #9054ef;font-family:;font-size:;line-height:;color:;background:;border-radius:50%;white-space: nowrap;">
+                                                        <p class="ls-l" style="top:125px;left:21px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:Nunito;font-size:16px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;">
+                                                            HIRE IN YOUR NEIGHBORHOOD
+                                                        </p>
+                                                    </img>
+                                                </div>
+                                                <div class="ls-slide" data-ls="transition2d:5;">
+                                                    <img alt="Nannie" class="ls-bg" src="images/Nannie.jpg"/>
+                                                    <div class="ls-l" data-ls="offsetxin:0;offsetyin:200;fadein:false;offsetxout:0;offsetyout:-200;" style="top:474px;left:0px;width:1140px;height:144px;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:#9054ef;border-radius:;white-space: nowrap;">
+                                                        <div class="slider-overlay">
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:505px;left:243px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:29px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Certified Babysitter
+                                                    </h2>
+                                                    <h2 class="ls-l hide-on-desktop" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:495px;left:241px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:40px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Certified Babysitter
+                                                    </h2>
+                                                    <p class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:517px;left:622px;width:450px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:15px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        “ We provide exceptional, compassion care to your loved in exceptional, compassionate care to your loved ones of home. ”
+                                                    </p>
+                                                    <p class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:543px;left:243px;width:300px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:13px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        Joanne | 38 yrs old | 10+ experience | $15-30/hr
+                                                    </p>
+                                                    <p class="ls-l hide-on-desktop" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:554px;left:243px;width:500px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:22px;line-height:23px;color:#fff;background:;border-radius:;">
+                                                        Joanne | 38 yrs old | 10+ experience | $15-30/hr
+                                                    </p>
+                                                    <div class="ls-l hide-on-mobile hide-on-small-tablet" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" style="top:536px;left:564px;width:6px;height:12px;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:;line-height:;color:;background:#824cd7;border-radius:;white-space: nowrap;">
+                                                    </div>
+                                                    <h2 class="ls-l" style="top:155px;left:625px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:54px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Connecting families
+                                                    </h2>
+                                                    <h2 class="ls-l" style="top:220px;left:630px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:54px;line-height:;color:#fff;background:;border-radius:;white-space: nowrap;">
+                                                        Caring for the Child
+                                                    </h2>
+                                                    <img alt="" class="ls-l" data-ls="offsetxin:0;offsetyin:200;offsetxout:0;offsetyout:-200;" src="images/Profile.png" style="top:357px;left:18px;width:200px;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:13px solid #9054ef;border-right:13px solid #9054ef;border-bottom:13px solid #9054ef;border-left:13px solid #9054ef;font-family:;font-size:;line-height:;color:;background:;border-radius:50%;white-space: nowrap;">
+                                                        <p class="ls-l" style="top:127px;left:879px;font-weight:bold;width:;height:;padding-top:;padding-right:;padding-bottom:;padding-left:;border-top:;border-right:;border-bottom:;border-left:;font-family:Nunito;font-size:16px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;">
+                                                            HIRE IN YOUR NEIGHBORHOOD
+                                                        </p>
+                                                    </img>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1460468851758">
+                            <div class="wpb_wrapper">
+                                <div class="" style="width: 96px;margin: 0 auto;">
+                                    <svg viewbox="0 0 96 24" xmlns="http://www.w3.org/2000/svg">
+                                        <style type="text/css">
+                                            .embellishment-5858e0eda9117{fill-rule:evenodd;clip-rule:evenodd;fill: #9054ef;}
+                                        </style>
+                                        <path class="embellishment-5858e0eda9117" d="M48 0H0c0 0 14.4 0.4 19 5 5.5 5.5 15.8 18.8 29 19 13.2-0.2 23.5-13.5 29-19 4.6-4.6 19-5 19-5H48z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1461751275875" id="about">
+                    <div class="wh-box-big wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461577273061">
+                            <div class="wpb_wrapper">
+                                <p class="vc_custom_heading vc_custom_1462275191197" style="color: #bababa;text-align: center">
+                                    Joanne Story
+                                </p>
+                                <h2 class="vc_custom_heading vc_custom_1462275167582" style="text-align: center">
+                                    Meet
+                                    <b>
+                                        Joanne J.
+                                    </b>
+                                </h2>
+                                <div class="wpb_text_column wpb_content_element vc_custom_1462275177830">
+                                    <div class="wpb_wrapper">
+                                        <p style="text-align: center;">
+                                            Hello there! I’m a reliable, caring, trustworthy, responsible and experienced babysitter. I love children and you can be sure I will take care of your child like my own. I know the most important thing is their safety, and providing loving care. I am perfect for those that need occasional care, date nights, overnights, and last-minute back-up care. I can also run errands.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="wpb_single_image wpb_content_element vc_align_center vc_custom_1462275203941">
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                            <img alt="Sign" class="vc_single_image-img attachment-thumbnail" height="51" sizes="(max-width: 150px) 100vw, 150px" src="images/Sign-150x51.png" srcset="images/Sign-150x51.png 150w, images/Sign.png 151w" width="150"/>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wh-box-big-left wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1461592251794">
+                            <div class="wpb_wrapper">
+                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner vc_custom_1461593412969">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_left-to-right vc_custom_1462278355813">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img alt="01" class="vc_single_image-img attachment-full" height="777" sizes="(max-width: 768px) 100vw, 768px" src="images/01-1.png" srcset="images/01-1.png 768w, images/01-1-297x300.png 297w, images/01-1-148x150.png 148w" width="768"/>
+                                                        </div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner vc_custom_1463390140563">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_left-to-right vc_custom_1462278375585">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img alt="03" class="vc_single_image-img attachment-full" height="777" sizes="(max-width: 768px) 100vw, 768px" src="images/03-1.png" srcset="images/03-1.png 768w, images/03-1-297x300.png 297w, images/03-1-148x150.png 148w" width="768"/>
+                                                        </div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner vc_custom_1463390059705">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_left-to-right vc_custom_1462278876478">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img alt="02" class="vc_single_image-img attachment-full" height="777" sizes="(max-width: 768px) 100vw, 768px" src="images/02-1.png" srcset="images/02-1.png 768w, images/02-1-297x300.png 297w, images/02-1-148x150.png 148w" width="768"/>
+                                                        </div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <h5 class="vc_custom_heading" style="text-align: left">
+                                                    <a href="#">
+                                                        How my service works
+                                                    </a>
+                                                </h5>
+                                                <div class="wpb_text_column wpb_content_element vc_custom_1462275089832">
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            I am very active, I like to cook, play and have fun with my kids and the children a used to babysit. Also, I have been a volunteer at my son’s school (3 years), helping teachers in their classroom.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6 class="vc_custom_heading" style="color: #00c1a7;text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal">
+                                                    <a href="#">
+                                                        READ MORE
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner vc_custom_1461592262718">
+                                            <div class="wpb_wrapper">
+                                                <h5 class="vc_custom_heading" style="text-align: left">
+                                                    <a href="#">
+                                                        My credentials
+                                                    </a>
+                                                </h5>
+                                                <div class="wpb_text_column wpb_content_element vc_custom_1462275078680">
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            In the present occasionally and I feel very happy to have found such a great families to work for. I am still open to meet more families that need occasional care to their children.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6 class="vc_custom_heading" style="color: #00c1a7;text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal">
+                                                    <a href="#">
+                                                        READ MORE
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1463143499259">
+                    <div class="wh-column-offset wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1462277073960" style="font-size: 103px;line-height: 144px;text-align: center">
+                                    75
+                                </h2>
+                                <h4 class="vc_custom_heading" style="font-size: 14px;text-align: center">
+                                    Families
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1462277083361" style="font-size: 103px;line-height: 144px;text-align: center">
+                                    3
+                                </h2>
+                                <h4 class="vc_custom_heading" style="font-size: 14px;text-align: center">
+                                    Certificates
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner vc_custom_1463392166575">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1462277087976" style="font-size: 103px;line-height: 144px;text-align: center">
+                                    55
+                                </h2>
+                                <h4 class="vc_custom_heading" style="font-size: 14px;text-align: center">
+                                    Working Hours
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-home-gallery">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461669288135">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                        <div class="sgg-style-7 " id="justified_gallery_smart_grid_unique_id">
+                                            <a class="sgg-lightbox-item" data-caption="Morning Time" href="images/01.png">
+                                                <img alt="Morning Time" src="images/01.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Travel" href="images/02.png">
+                                                <img alt="Travel" src="images/02.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Pediatritian" href="images/09.png">
+                                                <img alt="Pediatritian" src="images/09-202x300.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Infant Care" href="images/03.png">
+                                                <img alt="Infant Care" src="images/03.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Kitchen" href="images/04.png">
+                                                <img alt="Kitchen" src="images/04.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Enjoy" href="images/05.png">
+                                                <img alt="Enjoy" src="images/05.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Park" href="images/06.png">
+                                                <img alt="Park" src="images/06.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Enjoy" href="images/07.png">
+                                                <img alt="Enjoy" src="images/07-287x300.png"/>
+                                            </a>
+                                            <a class="sgg-lightbox-item" data-caption="Pet Sitting" href="images/08.png">
+                                                <img alt="Pet Sitting" src="images/08.png"/>
+                                            </a>
+                                        </div>
+                                        <div id="load_more_holder_smart_grid_unique_id" style="display:none">
+                                        </div>
+                                        <script type="text/javascript">
+                                            (function($){
+					$("#justified_gallery_smart_grid_unique_id").justifiedGallery({
+						sizeRangeSuffixes : {'lt100': '', 'lt240': '', 'lt320': '', 'lt500': '', 'lt640': '', 'lt1024': ''},rowHeight: 175,
+mobileRowHeight: 160,
+margins: 0,
+lastRow: "hide",
+fixedHeight: false,
+captions: true,
+captionsColor: "#000000",
+captionsOpacity: 0.7,
+randomize: false,
+maxRowHeight: 0,
+rel: "smart_grid_unique_id",
+target: null,
+refreshTime: 250,
+cssAnimation: true,
+captionsAnimationDuration: 500,
+imagesAnimationDuration: 300,
+captionsVisibleOpacity: 0.7,
+class: "",
+					})
+					.on('jg.complete', function(){
+						$('#justified_gallery_smart_grid_unique_id').photobox('a.sgg-lightbox-item',{title: true,
+counter: "(A/B)",
+thumbs: true,
+autoplay: false,
+time: 3000,
+zoomable: true,
+history: false,
+});					});
+										WebFontConfig = {
+	google: { families: [] }
+};
+(function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+})();WebFontConfig.google.families.push('Raleway');									var galleries = [];
+				var gallery = $("#justified_gallery_smart_grid_unique_id");
+				$(window).scroll(function() {
+					if ( galleries.length >= 1  ) {
+						var scroll_top = $(window).scrollTop();
+						var scroll_bottom = scroll_top + $(window).height();
+						var gallery_top = $(gallery).offset().top;
+						var gallery_height = $(gallery).innerHeight();
+						var gallery_bottom = gallery_top + gallery_height;
+						if( scroll_bottom >= gallery_bottom ) {
+							var images = galleries.splice(0,1);
+							var image_html = $("#load_more_holder_smart_grid_unique_id").html(images).text();
+							$(gallery).append(image_html);
+							$(gallery).justifiedGallery('norewind');
+						}
+					}
+				});				})(jQuery);
+                                        </script>
+                                        <style>
+                                            #justified_gallery_smart_grid_unique_id .sgg-caption {
+					background: rgb(0,0,0);
+					background: rgba(0,0,0,0.7);
+					color: #ffffff;
+					font-size: 1em;
+					font-weight: 400;
+					font-family: Raleway;
+				}
+				#load_more_smart_grid_unique_id {
+				    background: #444444;
+				    color: #ffffff;
+				}
+                                        </style>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid" id="qualifications">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461592716078">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1461668859393" style="text-align: center">
+                                    <b>
+                                        Qualifications
+                                    </b>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_column-gap-35">
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745379088">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278025472 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-park">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049964459" style="text-align: left">
+                                    <a href="#">
+                                        Taking to Playground
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050001942" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    What better time to take the kids out to the playground.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745566299">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278064175 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-fruit6">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049970619" style="text-align: left">
+                                    <a href="#">
+                                        Prepare Meals
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050007617" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    Have some fun with the kids in the kitchen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745570130">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278095045 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-time4">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049975807" style="text-align: left">
+                                    <a href="#">
+                                        Work Around Schedule
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050012521" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    Preserving their current schedule is the priority.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1462278324178 vc_column-gap-35">
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745573940">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278122655 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-interface1">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049981339" style="text-align: left">
+                                    <a href="#">
+                                        Grocery Shopping
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050018559" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    All days of the week aren't equal when it comes.
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745577387">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278165866 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-people3">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049986645" style="text-align: left">
+                                    <a href="#">
+                                        Pre-teen, infant, toodler
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050024132" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    Your child is advancing from infancy toward.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wh-icon-box wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461745581475">
+                            <div class="wpb_wrapper">
+                                <div class="wh-theme-icon vc_custom_1462278199439 " onmouseout="this.style.backgroundColor=''" onmouseover="this.style.backgroundColor='#00d9bd';" style="font-size:31px;position:absolute;border:1px solid #dcdcdc;padding:14px;border-radius:16px;">
+                                    <i class="icon-transport12">
+                                    </i>
+                                </div>
+                                <h5 class="vc_custom_heading vc_custom_1463049991925" style="text-align: left">
+                                    <a href="#">
+                                        Pickup from School
+                                    </a>
+                                </h5>
+                                <p class="vc_custom_heading vc_custom_1463050029296" style="font-size: 14px;color: #afafaf;line-height: 20px;text-align: left">
+                                    School pick-up has never been easy for parents.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-md-offset-2 vc_col-xs-6">
+                        <div class="vc_column-inner vc_custom_1463392217165">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                        <p style="text-align: right;">
+                                            The first thing to remember is the meaning of SAFE. According to Dr. Donna Thompson, the Director of NPPS, each letter represents one area of safety in the playground environment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-xs-6">
+                        <div class="vc_column-inner vc_custom_1463392211494">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                        <p>
+                                            One needs to remember that equipment does not supervise children; caring adults do. It takes only a moment for a child to get into a dangerous situation. The most important thing adults.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-sm-offset-3 vc_col-xs-6">
+                        <div class="vc_column-inner vc_custom_1463392227510">
+                            <div class="wpb_wrapper">
+                                <button class="wh-theme-button wh-alt-button-2 wh-button-float-right">
+                                    Download resume
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
+                        <div class="vc_column-inner vc_custom_1463392223507">
+                            <div class="wpb_wrapper">
+                                <button class="wh-theme-button wh-alt-button ">
+                                    Hire me now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1462273409674 vc_row-has-fill" data-vc-full-width="true" data-vc-full-width-init="false" id="fees">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461666389681">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1463392270335" style="text-align: center">
+                                    My
+                                    <b>
+                                        Fees
+                                    </b>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1462266590948 vc_row-has-fill" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1463392276893">
+                            <div class="wpb_wrapper">
+                                <div class="wh-pricing-plan" style="background-color:#ffffff">
+                                    <div class="price-box" style="color:#4a4a4a;border-right:2px solid #f5f5f5;">
+                                        <div class="title">
+                                            TAKING TO PLAYGROUND
+                                        </div>
+                                        <div class="price">
+                                            <small>
+                                                $
+                                            </small>
+                                            <span>
+                                                35
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box" style="color:#8c8c8c">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Total attention on your dog
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                A break in the day
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Safety is a priority
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                On leash
+                                            </li>
+                                        </ul>
+                                        <div class="footnote">
+                                            *rates are subject to change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1463392281119">
+                            <div class="wpb_wrapper">
+                                <div class="wh-pricing-plan" style="background-color:#ffffff">
+                                    <div class="price-box" style="color:#4a4a4a;border-right:2px solid #f5f5f5;">
+                                        <div class="title">
+                                            FULL TIME NANNIE
+                                        </div>
+                                        <div class="price">
+                                            <small>
+                                                $
+                                            </small>
+                                            <span>
+                                                55
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box" style="color:#8c8c8c">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Vening
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Occasional and temporary
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Sensory disorders
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                ADHD
+                                            </li>
+                                        </ul>
+                                        <div class="footnote">
+                                            *rates are subject to change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1462274210999 vc_row-has-fill" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1463392284734">
+                            <div class="wpb_wrapper">
+                                <div class="wh-pricing-plan" style="background-color:#ffffff">
+                                    <div class="price-box" style="color:#4a4a4a;border-right:2px solid #f5f5f5;">
+                                        <div class="title">
+                                            PART TIME
+                                        </div>
+                                        <div class="price">
+                                            <small>
+                                                $
+                                            </small>
+                                            <span>
+                                                65
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box" style="color:#8c8c8c">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Mother's Helpers
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Housekeeper
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Housecleaner
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Help with homework
+                                            </li>
+                                        </ul>
+                                        <div class="footnote">
+                                            *rates are subject to change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1463392288996">
+                            <div class="wpb_wrapper">
+                                <div class="wh-pricing-plan" style="background-color:#ffffff">
+                                    <div class="price-box" style="color:#4a4a4a;border-right:2px solid #f5f5f5;">
+                                        <div class="title">
+                                            AFTER SCHOOL CARE
+                                        </div>
+                                        <div class="price">
+                                            <small>
+                                                $
+                                            </small>
+                                            <span>
+                                                65
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box" style="color:#8c8c8c">
+                                        <ul>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Mother's Helpers
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Housekeeper
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Housecleaner
+                                            </li>
+                                            <li>
+                                                <i class="icon-check-icon" style="color:#9054ef">
+                                                </i>
+                                                Help with homework
+                                            </li>
+                                        </ul>
+                                        <div class="footnote">
+                                            *rates are subject to change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-background-accent-color vc_custom_1463039516456" data-vc-full-width="true" data-vc-full-width-init="false" id="testimonials">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1462280822554">
+                            <div class="wpb_wrapper">
+                                <div class="" style="width: 96px;margin: 0 auto;">
+                                    <svg viewbox="0 0 96 24" xmlns="http://www.w3.org/2000/svg">
+                                        <style type="text/css">
+                                            .embellishment-5858e0edba3fb{fill-rule:evenodd;clip-rule:evenodd;fill: #f5f5f5;}
+                                        </style>
+                                        <path class="embellishment-5858e0edba3fb" d="M48 0H0c0 0 14.4 0.4 19 5 5.5 5.5 15.8 18.8 29 19 13.2-0.2 23.5-13.5 29-19 4.6-4.6 19-5 19-5H48z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-background-accent-color vc_custom_1461669064476" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner vc_custom_1459850666073">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_left-to-right">
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                            <img alt="testimonial01" class="vc_single_image-img attachment-full" height="583" sizes="(max-width: 768px) 100vw, 768px" src="images/testimonial01.png" srcset="images/testimonial01.png 768w, images/testimonial01-300x228.png 300w, images/testimonial01-150x114.png 150w" width="768"/>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <h4 class="vc_custom_heading vc_custom_1461062733888" style="color: #ffffff;text-align: left">
+                                    Amanda Seyfried
+                                </h4>
+                                <p class="vc_custom_heading" style="color: #ffffff;text-align: left">
+                                    Sales & Marketing, Alien Ltd.
+                                </p>
+                                <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1461063493055 wh-testimonial-stars">
+                                    <div class="wpb_wrapper">
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                    </div>
+                                </div>
+                                <p class="vc_custom_heading vc_custom_1461666606488" style="color: #ffffff;text-align: left">
+                                    Care WP really helped us achieve our financial goals. The slick presentation along with fantastic readability ensures that
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner vc_custom_1461666504301">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_left-to-right">
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                            <img alt="testimonial02" class="vc_single_image-img attachment-full" height="583" sizes="(max-width: 768px) 100vw, 768px" src="images/testimonial02.png" srcset="images/testimonial02.png 768w, images/testimonial02-300x228.png 300w, images/testimonial02-150x114.png 150w" width="768"/>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-3">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <h4 class="vc_custom_heading vc_custom_1461062750811" style="color: #ffffff;text-align: left">
+                                    Sandy Gershin
+                                </h4>
+                                <p class="vc_custom_heading" style="color: #ffffff;text-align: left">
+                                    Certified CNA
+                                </p>
+                                <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1461063499534 wh-testimonial-stars">
+                                    <div class="wpb_wrapper">
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                        <i class="fa fa-star">
+                                        </i>
+                                    </div>
+                                </div>
+                                <p class="vc_custom_heading" style="color: #ffffff;text-align: left">
+                                    Kristin M. was in my employ May 12, 2015 through May 19, 2015 as a Personal Care Attendant to fill in for the temporary absence of my live-in attendant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid" id="news">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461666389681">
+                            <div class="wpb_wrapper">
+                                <h2 class="vc_custom_heading vc_custom_1461669133445" style="text-align: center">
+                                    News and
+                                    <b>
+                                        Articles
+                                    </b>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1460993108546" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461669367425">
+                            <div class="wpb_wrapper">
+                                <div class="linp-post-list wh-post-list wh-text-color">
+                                    <div class="vc_row">
+                                        <div class="wh-padding item one third">
+                                            <div class="img-container">
+                                                <div class="date">
+                                                    <div class="month">
+                                                        Apr
+                                                    </div>
+                                                    <div class="separator">
+                                                    </div>
+                                                    <div class="day">
+                                                        18
+                                                    </div>
+                                                </div>
+                                                <a href="#" title="Natural Nannies Childcare">
+                                                    <img alt="01" class="post-list-thumb wp-post-image" height="430" src="images/01-2-768x430.png" width="768"/>
+                                                </a>
+                                            </div>
+                                            <div class="data">
+                                                <h3>
+                                                    <a href="#" title="Natural Nannies Childcare">
+                                                        Natural Nannies Childcare
+                                                    </a>
+                                                </h3>
+                                                <div class="content">
+                                                    <p>
+                                                        Glowing Bath Time Fun I know now that it was not the best decision to stop practicing. Yet the pain demotivated me that much, that I had enough. I preferred to go to bed late.…
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wh-padding item one third">
+                                            <div class="img-container">
+                                                <div class="date">
+                                                    <div class="month">
+                                                        Apr
+                                                    </div>
+                                                    <div class="separator">
+                                                    </div>
+                                                    <div class="day">
+                                                        18
+                                                    </div>
+                                                </div>
+                                                <a href="#" title="Find Your Perfect Childcare">
+                                                    <img alt="02" class="post-list-thumb wp-post-image" height="430" src="images/02-2-768x430.png" width="768"/>
+                                                </a>
+                                            </div>
+                                            <div class="data">
+                                                <h3>
+                                                    <a href="#" title="Find Your Perfect Childcare">
+                                                        Find Your Perfect Childcare
+                                                    </a>
+                                                </h3>
+                                                <div class="content">
+                                                    <p>
+                                                        Weekly Trip to the Library I know now that it was not the best decision to stop practicing. Yet the pain demotivated me that much, that I had enough. I preferred to go to bed…
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wh-padding item one third">
+                                            <div class="img-container">
+                                                <div class="date">
+                                                    <div class="month">
+                                                        Apr
+                                                    </div>
+                                                    <div class="separator">
+                                                    </div>
+                                                    <div class="day">
+                                                        18
+                                                    </div>
+                                                </div>
+                                                <a href="#" title="Guidance on Family Care, Hiring">
+                                                    <img alt="03" class="post-list-thumb wp-post-image" height="430" src="images/03-2-768x430.png" width="768"/>
+                                                </a>
+                                            </div>
+                                            <div class="data">
+                                                <h3>
+                                                    <a href="#" title="Guidance on Family Care, Hiring">
+                                                        Guidance on Family Care, Hiring
+                                                    </a>
+                                                </h3>
+                                                <div class="content">
+                                                    <p>
+                                                        Weekly Trip to the Library I know now that it was not the best decision to stop practicing. Yet the pain demotivated me that much, that I had enough. I preferred to go to bed…
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_row-no-padding" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1459850666073">
+                            <div class="wpb_wrapper">
+                                <div class="wh-map-embellishment" style="width: 96px;margin: 0 auto;">
+                                    <svg viewbox="0 0 96 24" xmlns="http://www.w3.org/2000/svg">
+                                        <style type="text/css">
+                                            .embellishment-5858e0edc0b31{fill-rule:evenodd;clip-rule:evenodd;fill: #ffffff;}
+                                        </style>
+                                        <path class="embellishment-5858e0edc0b31" d="M48 0H0c0 0 14.4 0.4 19 5 5.5 5.5 15.8 18.8 29 19 13.2-0.2 23.5-13.5 29-19 4.6-4.6 19-5 19-5H48z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <script type="text/javascript">
+                                    // When the window has finished loading create our google map below
+			google.maps.event.addDomListener(window, 'load', function () {
+
+
+				// Basic options for a simple Google Map
+				// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+				var mapOptions = {
+					// How zoomed in you want the map to start at (always required)
+					zoom: 10,
+
+					// The latitude and longitude to center the map (always required)
+					center: new google.maps.LatLng(40.7143528, -74.0059731),
+
+
+										scrollwheel: false,
+					
+										// How you would like to style the map.
+					// This is where you would paste any style found on Snazzy Maps.
+					styles: [{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#FFFAF0"}]},{"featureType":"water","stylers":[{"color":"#d9edf7"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"lightness":40}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"on","color":"#c5dac6"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#CCAA88"},{"lightness":40}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#EEEEEE"}]},{"featureType":"road","stylers":[{"visibility":"simplified"},{"color":"#FF0000"},{"gamma":9}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":8}]},{"featureType":"road.highway.controlled_access","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":4}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#DDDDDD"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#CCCCCC"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#AAAAAA"},{"gamma":4}]}]
+									};
+
+
+				// Get the HTML DOM element that will contain your map
+				// We are using a div with id="map" seen below in the <body>
+				var mapElement = document.getElementById('theme-map-5858e0edc0c6b');
+
+				// Create the Google Map using our element and options defined above
+				var map = new google.maps.Map(mapElement, mapOptions);
+
+				var markerOptions = {
+					position: new google.maps.LatLng(40.7143528, -74.0059731),
+					map: map,
+					title: ''
+				};
+
+				
+				// Let's also add a marker while we're at it
+				var marker = new google.maps.Marker(markerOptions);
+
+
+			});
+                                </script>
+                                <div class="" id="theme-map-5858e0edc0c6b" style="width: 100%; height:366px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid vc_custom_1461751483559 vc_row-has-fill" data-vc-full-width="true" data-vc-full-width-init="false" id="contact">
+                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                        <div class="vc_column-inner vc_custom_1458739667740">
+                            <div class="wpb_wrapper">
+                                <p class="vc_custom_heading vc_custom_1462277848818" style="font-size: 17px;text-align: left">
+                                    Joanne Info
+                                </p>
+                                <h2 class="vc_custom_heading vc_custom_1462277844130" style="text-align: left">
+                                    Contact
+                                    <b>
+                                        Joanne
+                                    </b>
+                                </h2>
+                                <div class="wpb_text_column wpb_content_element vc_custom_1462276879001">
+                                    <div class="wpb_wrapper">
+                                        <p>
+                                            I would like to welcome you to our office and invite you to become better acquainted with the world of pet sitting and my distinct philosophy. Can be an intimidating endeavor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <div class="wh-theme-icon " style="font-size:29px;position:absolute;">
+                                                    <i class="icon-telephone" onmouseout="this.style.color=''" onmouseover="this.style.color='#02c1a8'">
+                                                    </i>
+                                                </div>
+                                                <h4 class="vc_custom_heading vc_custom_1462274693600" style="text-align: left">
+                                                    Phone
+                                                </h4>
+                                                <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_border_width_6 vc_sep_pos_align_center vc_separator_no_text vc_custom_1462277568458 vc_custom_1462277568458">
+                                                    <span class="vc_sep_holder vc_sep_holder_l">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                    <span class="vc_sep_holder vc_sep_holder_r">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <p class="vc_custom_heading vc_custom_1462274873436" style="text-align: left">
+                                                    Our Contact Phone
+                                                </p>
+                                                <p class="vc_custom_heading vc_custom_1462274877754" style="text-align: left">
+                                                    +123 456 789
+                                                </p>
+                                                <p class="vc_custom_heading vc_custom_1462274882392" style="text-align: left">
+                                                    +123 456 789
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <div class="wh-theme-icon " style="font-size:29px;position:absolute;">
+                                                    <i class="icon-letter" onmouseout="this.style.color=''" onmouseover="this.style.color='#02c1a8'">
+                                                    </i>
+                                                </div>
+                                                <h4 class="vc_custom_heading vc_custom_1462276786843" style="text-align: left">
+                                                    Email
+                                                </h4>
+                                                <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_border_width_6 vc_sep_pos_align_center vc_separator_no_text vc_custom_1462277579397 vc_custom_1462277579397">
+                                                    <span class="vc_sep_holder vc_sep_holder_l">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                    <span class="vc_sep_holder vc_sep_holder_r">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <p class="vc_custom_heading vc_custom_1462276670378" style="text-align: left">
+                                                    Our Contact Email
+                                                </p>
+                                                <p class="vc_custom_heading vc_custom_1462276693399" style="text-align: left">
+                                                    <a href="#">
+                                                        joanne@yourdomin.com
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <div class="wh-theme-icon " style="font-size:29px;position:absolute;">
+                                                    <i class="icon-gps" onmouseout="this.style.color=''" onmouseover="this.style.color='#02c1a8'">
+                                                    </i>
+                                                </div>
+                                                <h4 class="vc_custom_heading vc_custom_1462276797250" style="text-align: left">
+                                                    Address
+                                                </h4>
+                                                <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_border_width_6 vc_sep_pos_align_center vc_separator_no_text vc_custom_1462277584946 vc_custom_1462277584946">
+                                                    <span class="vc_sep_holder vc_sep_holder_l">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                    <span class="vc_sep_holder vc_sep_holder_r">
+                                                        <span class="vc_sep_line" style="border-color:#edeceb;">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <p class="vc_custom_heading vc_custom_1462276714713" style="text-align: left">
+                                                    Our Office Location
+                                                </p>
+                                                <p class="vc_custom_heading vc_custom_1462276727114" style="text-align: left">
+                                                    #405, Lan Streen,
+                                                </p>
+                                                <p class="vc_custom_heading vc_custom_1462276736248" style="text-align: left">
+                                                    Los Vegas, USA
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill">
+                        <div class="vc_column-inner vc_custom_1461593337198">
+                            <div class="wpb_wrapper">
+                                <h3 class="vc_custom_heading" style="text-align: center">
+                                    Make an
+                                    <b>
+                                        Appointment
+                                    </b>
+                                </h3>
+                                <div class="wpcf7" dir="ltr" id="wpcf7-f394-p13-o1" lang="en-US" role="form">
+                                    <div class="screen-reader-response">
+                                    </div>
+                                    <form action="/nannie/#wpcf7-f394-p13-o1" class="wpcf7-form" method="post" novalidate="novalidate">
+                                        <div style="display: none;">
+                                            <input name="_wpcf7" type="hidden" value="394"/>
+                                            <input name="_wpcf7_version" type="hidden" value="4.4.2"/>
+                                            <input name="_wpcf7_locale" type="hidden" value="en_US"/>
+                                            <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f394-p13-o1"/>
+                                            <input name="_wpnonce" type="hidden" value="f961eead53"/>
+                                        </div>
+                                        <div class="vc_row make-an-appointment-form" style="line-height:30px;">
+                                            <div class="vc_col-sm-6">
+                                                <p>
+                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                        <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" name="your-name" placeholder="Your name" size="30" type="text" value=""/>
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    <span class="wpcf7-form-control-wrap your-email">
+                                                        <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="your-email" placeholder="Your email" size="30" type="email" value=""/>
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    <span class="wpcf7-form-control-wrap your-subject">
+                                                        <input aria-invalid="false" class="wpcf7-form-control wpcf7-text" name="your-subject" placeholder="Your subject" size="30" type="text" value=""/>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="vc_col-sm-6">
+                                                <p>
+                                                    <span class="wpcf7-form-control-wrap your-message">
+                                                        <textarea aria-invalid="false" class="wpcf7-form-control wpcf7-textarea" cols="30" name="your-message" placeholder="Your message" rows="8">
+                                                        </textarea>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="vc_row">
+                                            <div class="vc_col-xs-6">
+                                                <p style="margin-top: 20px;margin-left: 11px;font-size: 15px;line-height: 18px;">
+                                                    All fields are obligatory
+                                                </p>
+                                            </div>
+                                            <div class="vc_col-xs-6">
+                                                <p class="form-button pull-right" style="width:100%;">
+                                                    <input class="wpcf7-form-control wpcf7-submit" type="submit" value="Make an Appointment"/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="wpcf7-response-output wpcf7-display-none">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-background-accent-color" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1461234082659">
+                            <div class="wpb_wrapper">
+                                <div class="" style="width: 96px;margin: 0 auto;">
+                                    <svg viewbox="0 0 96 24" xmlns="http://www.w3.org/2000/svg">
+                                        <style type="text/css">
+                                            .embellishment-5858e0edc60dc{fill-rule:evenodd;clip-rule:evenodd;fill: #f8f8f8;}
+                                        </style>
+                                        <path class="embellishment-5858e0edc60dc" d="M48 0H0c0 0 14.4 0.4 19 5 5.5 5.5 15.8 18.8 29 19 13.2-0.2 23.5-13.5 29-19 4.6-4.6 19-5 19-5H48z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-background-accent-color vc_custom_1461245159423" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1463147040714">
+                            <div class="wpb_wrapper">
+                                <div class="wh-content-box wh-footer-icons">
+                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1463058084704 wh-footer-icon vc_icon_element-align-left vc_icon_element-have-style">
+                                        <div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-xs vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style="background-color:rgba(221,221,221,0.5)">
+                                            <span class="vc_icon_element-icon fa fa-facebook">
+                                            </span>
+                                            <a class="vc_icon_element-link" href="https://www.facebook.com/" target="_self" title="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1463058075537 wh-footer-icon vc_icon_element-align-left vc_icon_element-have-style">
+                                        <div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-xs vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style="background-color:rgba(221,221,221,0.5)">
+                                            <span class="vc_icon_element-icon fa fa-twitter">
+                                            </span>
+                                            <a class="vc_icon_element-link" href="https://twitter.com/" target="_self" title="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1463058061513 wh-footer-icon vc_icon_element-align-left vc_icon_element-have-style">
+                                        <div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-xs vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style="background-color:rgba(221,221,221,0.5)">
+                                            <span class="vc_icon_element-icon fa fa-google-plus-square">
+                                            </span>
+                                            <a class="vc_icon_element-link" href="https://plus.google.com/" target="_self" title="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1463058050816 wh-footer-icon vc_icon_element-align-left vc_icon_element-have-style">
+                                        <div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-xs vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style="background-color:rgba(221,221,221,0.5)">
+                                            <span class="vc_icon_element-icon fa fa-linkedin-square">
+                                            </span>
+                                            <a class="vc_icon_element-link" href="https://www.linkedin.com/" target="_self" title="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1463058040759 wh-footer-icon vc_icon_element-align-left vc_icon_element-have-style">
+                                        <div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-xs vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-custom" style="background-color:rgba(221,221,221,0.5)">
+                                            <span class="vc_icon_element-icon fa fa-instagram">
+                                            </span>
+                                            <a class="vc_icon_element-link" href="https://www.instagram.com/" target="_self" title="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid wh-background-accent-color vc_custom_1461245197377" data-vc-full-width="true" data-vc-full-width-init="false">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner vc_custom_1463147045348">
+                            <div class="wpb_wrapper">
+                                <p class="vc_custom_heading" style="color: #ffffff;text-align: center">
+                                    © CARE 2016 • 13 Hanway Square, London • Tel: 71494563 • Handcrafted with love by AislinTeam
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix">
+                </div>
+            </div>
+        </div>
+        <link href="http://fonts.googleapis.com/css?family=Abril+Fatface%3Aregular&ver=4.6-alpha-37307" id="vc_google_fonts_abril_fatfaceregular-css" media="all" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.form.min.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+        </script>
+        <script src="js/scripts.js" type="text/javascript">
+        </script>
+        <script src="js/main.js" type="text/javascript">
+        </script>
+        <script src="js/wheels-plugins.min.js" type="text/javascript">
+        </script>
+        <script src="js/wheels-main.min.js" type="text/javascript">
+        </script>
+        <script src="js/wp-embed.js" type="text/javascript">
+        </script>
+        <script src="js/js_composer_front.min.js" type="text/javascript">
+        </script>
+        <script src="js/waypoints.min.js" type="text/javascript">
+        </script>
+    </body>
+</html>
